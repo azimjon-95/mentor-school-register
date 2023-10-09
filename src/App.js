@@ -1,8 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Logo from './assets/mentorSchoolLogo.jpg'
 import unn from './assets/recep.jpg'
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { BsCheckCircle } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const App = () => {
@@ -91,7 +91,7 @@ const App = () => {
           />
 
           {formData.fullname.length >= 4 ? (
-            <AiOutlineCheckCircle style={{ color: "green" }} />
+            <BsCheckCircle style={{ color: "green" }} />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -125,7 +125,7 @@ const App = () => {
           />
 
           {formData.number.length >= 13 ? (
-            <AiOutlineCheckCircle style={{ color: "green" }} />
+            <BsCheckCircle style={{ color: "green" }} />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -160,7 +160,7 @@ const App = () => {
           />
 
           {formData.sinif.length >= 1 ? (
-            <AiOutlineCheckCircle style={{ color: "green" }} />
+            <BsCheckCircle style={{ color: "green" }} />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -190,7 +190,7 @@ const App = () => {
             <option value="Biologiya">Biologiya</option>
           </select>
           {formData.text.length >= 3 ? (
-            <AiOutlineCheckCircle style={{ color: "green" }} />
+            <BsCheckCircle style={{ color: "green" }} />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
