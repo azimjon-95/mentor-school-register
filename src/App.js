@@ -1,7 +1,5 @@
-import React, { useState, useRef } from 'react'
+import React, { useState} from 'react'
 import './App.css'
-import { BiMessageX } from 'react-icons/bi'
-import { BsCloudCheck } from 'react-icons/bs'
 import Logo from './assets/mentorSchoolLogo.jpg'
 import unn from './assets/recep.jpg'
 import { AiOutlineCheckCircle } from "react-icons/ai";
