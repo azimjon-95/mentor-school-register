@@ -24,7 +24,7 @@ const App = () => {
 
     let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
     // let chatId = "39464759"; // Azimjon
-    let chatId = "-1001870667553"; 
+    let chatId = "-1001870667553";
 
     // let tempUrl = `https://api.telegram.org/bot6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k/sendMessage?chat_id=39464759&text=Salom&parse_mode=html`;
     let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${Info}&parse_mode=html`;
@@ -136,7 +136,7 @@ const App = () => {
         <br />
         <br />
 
-        <p>Sinfi <p className='red'>*</p> </p>
+        <p>Sinfingiz <p className='red'>*</p> </p>
 
         <div
           className="form_item"
