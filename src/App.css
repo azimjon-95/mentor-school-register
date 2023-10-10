@@ -444,4 +444,9 @@
   .borderNone {
     font-size: 15px;
   }
+
+  .form_item >img {
+    width: 5.5%;
+    margin-top: 9px;
+  }
 }
