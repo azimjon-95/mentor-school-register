@@ -179,7 +179,7 @@ const App = () => {
             <option >Мой выбор</option>
             <option value="Ingiliz tili">Ingiliz tili (IELTS)</option>
             <option value="Rus tili">Rus tili</option>
-            <option value="Ona tili Adabiyon">Ona tili va Adabiyon</option>
+            <option value="Ona tili Adabiyon">Ona tili va Adabiyot</option>
             <option value="Kimyo">Kimyo</option>
             <option value="Biologiya">Biologiya</option>
           </select>
