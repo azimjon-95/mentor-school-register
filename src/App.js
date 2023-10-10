@@ -22,9 +22,9 @@ const App = () => {
   const sendMsgToBot = async (e) => {
     let Info = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.fullname}%0A%0A ☎️ Tel: ${formData.number}%0A 🔢 Sinfi: ${formData.sinif}%0A 📌 Kursi: ${formData.text}%0A`
 
-    let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
+    let tokenBot = "6568476432:AAHYzSVPn-k5Lm3PkvuawWU2zufXemLKzPY"; // Azimjon
     // let chatId = "39464759"; // Azimjon
-    let chatId = "-1001870667553";
+    let chatId = "-4025863351";
 
     // let tempUrl = `https://api.telegram.org/bot6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k/sendMessage?chat_id=39464759&text=Salom&parse_mode=html`;
     let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${Info}&parse_mode=html`;
@@ -38,7 +38,7 @@ const App = () => {
     setTimeout(() => {
       setResult(false)
       window.location = "https://t.me/mentor_school_centre"
-    }, 11000)
+    }, 3000)
 
 
 
@@ -186,7 +186,7 @@ const App = () => {
             <option >Мой выбор</option>
             <option value="Ingiliz tili">Ingiliz tili (IELTS)</option>
             <option value="Rus tili">Rus tili</option>
-            <option value="Ona tili Adabiyon">Ona tili va Adabiyot</option>
+            <option value="Ona tili Adabiyot">Ona tili va Adabiyot</option>
             <option value="Kimyo">Kimyo</option>
             <option value="Biologiya">Biologiya</option>
           </select>
