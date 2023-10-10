@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import './App.css'
-import Logo from './assets/mentorSchoolLogo.jpg'
-import unn from './assets/recep.jpg'
-import { BsCheckCircle } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
+import React, { useState } from 'react';
+import './App.css';
+import Logo from './assets/mentorSchoolLogo.jpg';
+import unn from './assets/recep.jpg';
+import check from './assets/check-mark.png';
+import tele from './assets/telegram.png';
 
 const App = () => {
+
   const [result, setResult] = useState(false)
   const [formData, setFormData] = useState({
     fullname: "",
@@ -81,7 +82,8 @@ const App = () => {
           />
 
           {formData.fullname.length >= 4 ? (
-            <BsCheckCircle style={{ color: "green" }} />
+            // <BsCheckCircle style={{ color: "green" }} />
+            <img src={check} alt='' />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -115,7 +117,8 @@ const App = () => {
           />
 
           {formData.number.length >= 13 ? (
-            <BsCheckCircle style={{ color: "green" }} />
+            // <BsCheckCircle style={{ color: "green" }} />
+            <img src={check} alt='' />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -150,7 +153,8 @@ const App = () => {
           />
 
           {formData.sinif.length >= 1 ? (
-            <BsCheckCircle style={{ color: "green" }} />
+            // <BsCheckCircle style={{ color: "green" }} />
+            <img src={check} alt='' />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -180,7 +184,8 @@ const App = () => {
             <option value="Biologiya">Biologiya</option>
           </select>
           {formData.text.length >= 3 ? (
-            <BsCheckCircle style={{ color: "green" }} />
+            // <BsCheckCircle style={{ color: "green" }} />
+            <img src={check} alt='' />
           ) : (
             // <AiOutlineCloseCircle style={{ color: "red" }} />
             ""
@@ -196,7 +201,7 @@ const App = () => {
             :
             <button onClick={() => {
               sendMsgToBot()
-            }} className="TelegramPlane">Отправить <FaTelegramPlane /></button>
+            }} className="TelegramPlane">Отправить <img width={17} src={tele} alt="" /> </button>
         }
         <button onClick={() => Clear()} className='Ochi'>Очистить форму</button>
       </div>
