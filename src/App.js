@@ -6,7 +6,6 @@ import { BsCheckCircle } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 
 const App = () => {
-  const [loading, setLoading] = useState(false)
   const [result, setResult] = useState(false)
   const [formData, setFormData] = useState({
     fullname: "",
@@ -20,28 +19,19 @@ const App = () => {
 
 
   const sendMsgToBot = async (e) => {
-    let myText = `<b>O'quvchi ro'yxatdan o'tdi</b>%0A%0A`;
-    myText += `Ismi: <h3>${formData.fullname}</h3>%0A`;
-    myText += `Tel: <b>${formData.number}</b>%0A`;
-    myText += `Sinifi: <b>${formData.sinif}</b>%0A`;
-    myText += `ko'rs: <b>${formData.text}</b>%0A`;
-
-    let aaa = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.fullname}%0A%0A ☎️ Tel: ${formData.number}%0A 🔢 Sinifi: ${formData.sinif}%0A 📌 Ko'rsi: ${formData.text}%0A`
+    let Info = `👤<b> O'quvchi ro'yxatdan o'tdi</b>%0A%0A <b>Ismi</b>: ${formData.fullname}%0A%0A ☎️ Tel: ${formData.number}%0A 🔢 Sinfi: ${formData.sinif}%0A 📌 Kursi: ${formData.text}%0A`
 
     let tokenBot = "6230509348:AAHqIOcv8e6rUeikjKdc27-H1rMw1oLux0k"; // Azimjon
     let chatId = "39464759"; // Azimjon
 
-    // let tokenBot = "6189129353:AAGm-0xifsZE4DGO8XETTxnMP7rvZNWzWHo";  // Diyorbek
-    // let chatId = "1986279045"; // Diyorbek
-
-    let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${aaa}&parse_mode=html`;
+    let tempUrl = `https://api.telegram.org/bot${tokenBot}/sendMessage?chat_id=${chatId}&text=${Info}&parse_mode=html`;
     let api = new XMLHttpRequest();
     api.open("GET", tempUrl, true);
     api.send();
 
     setTimeout(() => {
       setResult(true)
-    }, 3500)
+    }, 3000)
     setTimeout(() => {
       setResult(false)
     }, 11000)
@@ -137,7 +127,7 @@ const App = () => {
         <br />
         <br />
 
-        <p>Sinif <p className='red'>*</p> </p>
+        <p>Sinfi <p className='red'>*</p> </p>
 
         <div
           className="form_item"
@@ -171,7 +161,7 @@ const App = () => {
       </div>
 
       <div className="box none">
-        <p>Ko'rsni tanlang <p className='red'>*</p></p>
+        <p>Kursni tanlang <p className='red'>*</p></p>
         <div
           className="form_item"
 
@@ -201,14 +191,13 @@ const App = () => {
       <div className="submit">
         {/* ${leading} */}
         {
-          loading ? <button className="TelegramPlane">Отправил <FaTelegramPlane /></button> : <button onClick={() => {
-            setLoading(true)
-            sendMsgToBot()
-
-          }} className="Otp">Отправить</button>
+          formData.number === 0 || formData.name === '' || formData.text === '' || formData.sinif === '' ?
+            <button className="Otp">Отправить</button>
+            :
+            <button onClick={() => {
+              sendMsgToBot()
+            }} className="TelegramPlane">Отправить <FaTelegramPlane /></button>
         }
-
-
         <button onClick={() => Clear()} className='Ochi'>Очистить форму</button>
       </div>
 
@@ -216,13 +205,9 @@ const App = () => {
         <p>© Mentor school, 2023 All rights reserved.</p>
       </div>
 
-
-
       <div className={`cloud ${result ? 'cloudShow' : ""}`}>
-        {/* <div className={`cloud cloudShow`}> */}
         <img src={unn} alt="" />
         <p>Siz muvofaqiyatli roʻyhatdan oʻtdingiz. Tez orada operatorlarimiz siz bilan bogʻlanishadi😊</p>
-
       </div>
       {result ? <div onClick={() => setResult(false)} className="displayNone"></div> : ''}
 
