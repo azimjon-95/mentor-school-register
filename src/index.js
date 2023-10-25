@@ -10,11 +10,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   < React.StrictMode >
-    {/* <App /> */}
-    <div className='heck'>
+    <App />
+    {/* <div className='heck'>
       <h1>Hello World!</h1>
       <img src={heck} alt="" />
-    </ div>
+    </ div> */}
   </React.StrictMode >
 );
 
