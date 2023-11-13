@@ -109,9 +109,9 @@ const App = () => {
           <input
             type="text"
             value={formData.number}
-            onChange={(e) =>
-              setFormData({ ...formData, number: e.target.value })
-            }
+            // onChange={(e) =>
+            //   setFormData({ ...formData, number: e.target.value })
+            // }
 
             className='name'
             placeholder='Мой ответ'
